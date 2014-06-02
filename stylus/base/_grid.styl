@@ -1,0 +1,73 @@
+.use-grid(@boolean) when (@boolean = true) {
+    //------------------------------------//
+    //  $GRID
+    //------------------------------------//
+    .row {
+        width: 100%;
+        
+        &:after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+    }
+
+    [class*='#{@column-prefix}'] {
+        .vendor(background-clip, padding-box !important);
+        
+		&.right { float: right; }
+		
+        img { max-width: 100%; }
+    }
+
+    .breakpoint(small) {
+        [class*='#{@column-prefix}'] { float: left; }
+        
+        .gutters [class*='#{@column-prefix}'] {
+            margin-left: @gutters;
+            
+            &:first-child { margin-left: 0; }
+        }
+        
+        
+        // Row columns        
+		.grid-setup(@column-number);
+        
+		
+		// Push
+        .use-push(@boolean) when (@boolean = true) {
+			[class*='push-'] { position: relative; }
+			
+			.push-setup(@column-number); 
+		}
+		
+		.use-push(@use-push); 
+        
+		
+		// Pull
+        .use-pull(@boolean) when (@boolean = true) {
+			[class*='pull-'] { position: relative; }
+			
+			.pull-setup(@column-number);
+		}
+		
+		.use-pull(@use-pull); 
+    }
+
+
+    // Non-responsive grid
+    .non-responsive {
+        [class*='#{@column-prefix}'] {
+            float: left;
+            width: auto !important; 
+        }
+        
+        .gutters [class*='#{@column-prefix}'], 
+		&.gutters [class*='#{@column-prefix}'] { margin-left: @gutters; }
+        
+        .gutters [class*='#{@column-prefix}']:first-child, 
+		&.gutters [class*='#{@column-prefix}']:first-child { margin-left: 0; }
+    }
+}
+
+.use-grid(@use-grid); 

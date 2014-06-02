@@ -1,0 +1,14 @@
+.use-clearfix(@boolean) when (@boolean = true) {
+    //------------------------------------//
+    //  $CLEARFIX
+    //------------------------------------//
+    .clearfix {
+         &:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+}
+
+.use-clearfix(@use-clearfix); 

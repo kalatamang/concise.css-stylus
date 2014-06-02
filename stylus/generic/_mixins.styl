@@ -1,0 +1,102 @@
+//
+// Passing in a single value will create font-sizing in 
+// pixels, rems as well as a proper line-height.
+// 
+//    `.font-size(24px, false);`
+// 
+// 
+.font-size(@font-size, @line-height: true) {
+	@px-value: (@font-size);
+	@rem-value: (@font-size / @base-font-size) * 1rem;
+	@line-height-value: ceil((@font-size / @base-line-height) * (@base-line-height / @font-size));
+
+	font-size: ~"@{px-value}px";
+	font-size: @rem-value;
+
+	.line-height(@boolean) when (@boolean = true) {
+		line-height: unit(@line-height-value);
+	}
+
+	.line-height(@line-height);
+}
+
+
+// 
+// Proper vendor prefixes are created just by 
+// passing a property value and size value.
+// 
+//    `.vendor(border-radius, 4px);`
+// 
+// 
+.vendor(@property, @value) {
+	-webkit-@{property}: @value;
+	-moz-@{property}: @value;
+	-o-@{property}: @value;
+	-ms-@{property}: @value;
+	@{property}: @value;
+}
+
+
+//
+// By passing in one of the pre-defined media queries that 
+// are packaged with Concise by default, you can easily 
+// create styles that are built from the ground-up to be 
+// mobile friendly.
+// 
+//    `@media @medium { styles here }`
+// 
+// 
+@extra-small:  ~"only screen and (max-width:"@extra-small-start")";
+@small: 	   ~"only screen and (min-width:"@small-start")";
+@medium: 	   ~"only screen and (min-width:"@medium-start")";
+@large: 	   ~"only screen and (min-width:"@large-start")";
+@extra-large:  ~"only screen and (min-width:"@extra-large-start")";
+@high-density: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+               ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+               ~"only screen and (min-device-pixel-ratio: 1.5)";
+
+
+//
+// Create variable-number grid columns given the value
+// for variable `@column-number` 
+// 
+.grid-setup(@number: @column-number) {
+	// Assign percentage-based widths for columns	
+	.grid-setup(@n, @i: 1) when (@i =< @n) {
+	  .@{column-prefix}@{i} { width: (@i * 100% / @n); }
+	  
+	  // Subtract gutter amount from columns
+	  .gutters .@{column-prefix}@{i} { width: (@i * 100% / @n - @gutters); }
+	  
+	  .grid-setup(@n, (@i + 1));
+	}
+
+	.grid-setup(@column-number);
+}
+
+
+//
+// Create proper `.push-` classes given the value
+// for variable `@column-number`
+// 
+.push-setup(@n, @i: 1) when (@i =< @n) {
+	.push-@{i} { left: (@i * 100% / @n); }
+
+	.gutters .push-@{i} { left: (@i * 100% / @n - @gutters); }
+
+	.push-setup(@n, (@i + 1));
+}
+
+
+//
+// Create proper `.pull-` classes given the value
+// for variable `@column-number`
+// 
+.pull-setup(@n, @i: 1) when (@i =< @n) {
+	.pull-@{i} { right: (@i * 100% / @n); }
+
+	.gutters .pull-@{i} { right: (@i * 100% / @n - @gutters); }
+
+	.pull-setup(@n, (@i + 1));
+}
