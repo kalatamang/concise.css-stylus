@@ -1,18 +1,13 @@
-.use-main(@boolean) when (@boolean = true) {
+@if $use-main == true {
     //------------------------------------//
     //  $MAIN
     //------------------------------------//
-    
-	// Variables
-	@font-size: ((@base-font-size/16px) * 1em);
-	@line-height-integer: unit(@line-height-ratio);
-	
-	@if @global-border-box == true {
+    @if $global-border-box == true {
         *{
             &,
             &:before,
             &:after {
-                .vendor(box-sizing, border-box);
+                @include vendor(box-sizing, border-box);
             }
         }
     }
@@ -20,8 +15,8 @@
     html, 
 	body {
         background-color: #fff;
-        color: @base-font-color;
-        font: normal normal @font-size/@line-height-integer @base-font-family;
+        color: $base-font-color;
+        font: normal normal #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
         margin: 0;
         
         text-rendering: optimizeLegibility;
@@ -33,5 +28,3 @@
 
     html[dir="rtl"] { direction: rtl; }
 }
-
-.use-main(@use-main); 

@@ -1,10 +1,10 @@
-.use-normalize(@boolean) when (@boolean = true) {
+@if $use-normalize == true {
     //------------------------------------//
     //  $NORMALIZE  
     //------------------------------------// 
     html {
         font-size: 100%;
-        .vendor(text-size-adjust, 100%);
+        @include vendor(text-size-adjust, 100%);
     }
 
     article,
@@ -84,7 +84,7 @@
         clear: both;
         height: 0;
         
-        .vendor(box-sizing, content-box);
+        @include vendor(box-sizing, content-box);
     }
 
     pre {
@@ -99,7 +99,7 @@
     samp {
         font-family: monospace, monospace;
         _font-family: 'courier new', monospace;
-        .font-size(@base-font-size);
+        @include font-size($base-font-size);
     }
 
     q {
@@ -165,7 +165,7 @@
         
         &[type="search"] {
             -webkit-appearance: textfield;        
-            .vendor(box-sizing, content-box);
+            @include vendor(box-sizing, content-box);
             
             &::-webkit-search-cancel-button, 
             &::-webkit-search-decoration { -webkit-appearance: none; }
@@ -193,5 +193,3 @@
     td, 
     th { padding: 0; }
 }
-
-.use-normalize(@use-normalize); 

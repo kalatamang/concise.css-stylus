@@ -1,4 +1,4 @@
-.use-buttons(@boolean) when (@boolean = true) {
+@if $use-buttons == true {
     //------------------------------------//
     //  $BUTTONS
     //------------------------------------//
@@ -23,11 +23,11 @@
         
         -webkit-touch-callout: none;
         
-        .vendor(user-select, none);
+        @include vendor(user-select, none);
         
-        .vendor(user-drag, none);
+        @include vendor(user-drag, none);
         
-        .vendor(transition, all 0.3s);
+        @include vendor(transition, all 0.3s);
         
         &::-moz-focus-inner {
             padding: 0;
@@ -76,7 +76,7 @@
         }
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .btn {
             display: inline-block;
             *display: inline;
@@ -89,7 +89,7 @@
 		a.btn-extra-small, 
 		p.btn-extra-small, 
 		input.btn-extra-small {
-            .font-size(11px); 
+            @include font-size(11px); 
             padding: 5px 16px;
         }
         
@@ -97,7 +97,7 @@
 		a.btn-small, 
 		p.btn-small, 
 		input.btn-small {
-            .font-size(12px); 
+            @include font-size(12px); 
             padding: 10px 32px;
         }
         
@@ -149,11 +149,11 @@
             }
             
             &.white {
-                border-color: @bg-white;
+                border-color: $bg-white;
                 
                 &:hover {
-                    background: @bg-white;
-                    color: @color-black !important;
+                    background: $bg-white;
+                    color: $color-black !important;
                 }
             }
         }
@@ -162,12 +162,12 @@
 
     // Bordered white 
     a.btn.border.white:hover {
-        background: @bg-white;
-        color: @color-black !important;
+        background: $bg-white;
+        color: $color-black !important;
     }
 
     .btn.border.white, 
-	a.btn.border.white { color: @color-white; }
+	a.btn.border.white { color: $color-white; }
 
     .btn.border {
         &.white {
@@ -177,67 +177,67 @@
         
         // Bordered black 
         &.black {
-            border-color: @bg-black;
-            color: @color-black;
+            border-color: $bg-black;
+            color: $color-black;
             
-            &:hover { background-color: @bg-black; }
+            &:hover { background-color: $bg-black; }
             
-            &:active, &:focus { background-color: @bg-black; }
+            &:active, &:focus { background-color: $bg-black; }
         }
         
         
         // Bordered gray 
         &.gray {
-            border-color: @bg-gray;
-            color: @color-gray;
+            border-color: $bg-gray;
+            color: $color-gray;
             
-            &:hover { background-color: @bg-gray; }
+            &:hover { background-color: $bg-gray; }
             
-            &:active, &:focus { background-color: darken(@bg-gray, 15%); }
+            &:active, &:focus { background-color: darken($bg-gray, 15%); }
         }
         
         
         // Bordered green 
         &.green {
-            border-color: @bg-green;
-            color: @color-green;
+            border-color: $bg-green;
+            color: $color-green;
             
-            &:hover { background-color: @bg-green; }
+            &:hover { background-color: $bg-green; }
             
-            &:active, &:focus { background-color: darken(@bg-green, 15%); }
+            &:active, &:focus { background-color: darken($bg-green, 15%); }
         }
         
         
         // Bordered blue 
         &.blue {
-            border-color: @bg-blue;
-            color: @color-blue;
+            border-color: $bg-blue;
+            color: $color-blue;
             
-            &:hover { background-color: @bg-blue; }
+            &:hover { background-color: $bg-blue; }
         
-            &:active, &:focus { background-color: darken(@bg-blue, 15%); }
+            &:active, &:focus { background-color: darken($bg-blue, 15%); }
         }
         
         
         // Bordered yellow 
         &.yellow {
-            border-color: @bg-yellow;
-            color: @color-yellow;
+            border-color: $bg-yellow;
+            color: $color-yellow;
             
-            &:hover { background-color: @bg-yellow; }
+            &:hover { background-color: $bg-yellow; }
             
-            &:active, &:focus { background-color: darken(@bg-yellow, 15%); }
+            &:active, &:focus { background-color: darken($bg-yellow, 15%); }
         }
         
         
         // Bordered red 
         &.red {
-            border-color: @bg-red;
-            color: @color-red;
+            border-color: $bg-red;
+            color: $color-red;
             
-            &:hover { background-color: @bg-red; }
+            &:hover { background-color: $bg-red; }
             
-            &:active, &:focus { background-color: darken(@bg-red, 15%); }
+            &:active, &:focus { background-color: darken($bg-red, 15%); }
         }
     }
 
@@ -265,7 +265,7 @@
         }
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .btn-extra-small .caret, 
 		.btn-small .caret {
             border-top: 4px solid;
@@ -284,5 +284,3 @@
         }
     }
 }
-
-.use-buttons(@use-buttons); 

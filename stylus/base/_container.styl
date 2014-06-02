@@ -1,16 +1,14 @@
-.use-container(@boolean) when (@boolean = true) {
+@if $use-container == true {
     //------------------------------------//
     //  $CONTAINER
     //------------------------------------//
     .container { width: 90%; }
 
-    .breakpoint(small) { .container { width: 620px; } }
+    @include breakpoint(small) { .container { width: 620px; } }
 
-    .breakpoint(medium) { .container { width: 768px; } }
+    @include breakpoint(medium) { .container { width: 768px; } }
 
-    .breakpoint(large) { .container { width: 960px; } }
+    @include breakpoint(large) { .container { width: 960px; } }
 
-    .breakpoint(extra-large) { .container { width: 1140px; } }
+    @include breakpoint(extra-large) { .container { width: 1140px; } }
 }
-
-.use-container(@use-container); 

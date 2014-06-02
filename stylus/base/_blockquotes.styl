@@ -1,4 +1,4 @@
-.use-blockquotes(@boolean) when (@boolean = true) {
+@if $use-blockquotes == true {
     //------------------------------------//
     //  $BLOCKQUOTES
     //------------------------------------//
@@ -13,7 +13,7 @@
         cite {
             color: #555;
             display: block;
-            .font-size(14px);
+            @include font-size(14px);
             
             &:before { content: "\2014 \0020"; }
             
@@ -34,5 +34,3 @@
         }
     }
 }
-
-.use-blockquotes(@use-blockquotes); 

@@ -1,4 +1,4 @@
-.use-helper(@boolean) when (@boolean = true) {
+@if $use-helper == true {
     //------------------------------------//
     //  $HELPER
     //------------------------------------//
@@ -25,7 +25,7 @@
     // Displaying content
     .inline { display: block; }
 
-    .breakpoint(extra-small) { .inline { display: inline; } }
+    @include breakpoint(extra-small) { .inline { display: inline; } }
 
     .show {
         display: block;
@@ -111,5 +111,3 @@
     // Pill style
     .pill { border-radius: 25px; }
 }
-
-.use-helper(@use-helper); 

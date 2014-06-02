@@ -1,4 +1,4 @@
-.use-groups(@boolean) when (@boolean = true) {
+@if $use-groups == true {
     //------------------------------------//
     //  $GROUPS
     //------------------------------------//
@@ -20,14 +20,14 @@
         background-color: #fff;
         border: 1px solid #ddd;
         color: #666;
-        .font-size(12px); 
+        @include font-size(12px); 
         padding: 4px 7px;
         width: auto;
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .group-item {
-            .font-size(@base-font-size); 
+            @include font-size($base-font-size); 
             padding: 6px 12px;
         }
     }
@@ -36,7 +36,7 @@
         &:hover { background-color: #f9f9f9; }
         
         &:active {        
-            .vendor(box-shadow, inset 0 1px 1px rgba(100, 100, 100, 0.1));
+            @include vendor(box-shadow, inset 0 1px 1px rgba(100, 100, 100, 0.1));
         }
         
         &.active, 
@@ -56,9 +56,9 @@
 
     // Rounded corners
     .group.border-radius > .group-item {
-        &:first-child { border-radius: @border-radius 0 0 @border-radius; }
+        &:first-child { border-radius: $border-radius 0 0 $border-radius; }
         
-        &:last-child { border-radius: 0 @border-radius @border-radius 0; }
+        &:last-child { border-radius: 0 $border-radius $border-radius 0; }
     }
 
 
@@ -69,7 +69,7 @@
         width: 100%;
         
         li a {
-            .font-size(12px); 
+            @include font-size(12px); 
             padding: 4px 7px;
             width: auto;
         }
@@ -91,7 +91,7 @@
         }
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .group .caret {
             border-top: 5px solid;
             border-right: 5px solid transparent;
@@ -99,5 +99,3 @@
         }
     }
 }
-
-.use-groups(@use-groups); 

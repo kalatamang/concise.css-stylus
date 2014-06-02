@@ -1,4 +1,4 @@
-.use-pring(@boolean) when (@boolean = true) {
+@if $use-print == true {
     //------------------------------------//
     //  $PRINT
     //------------------------------------//
@@ -10,14 +10,14 @@
             color: black !important;
             text-shadow: none !important;
             
-            .vendor(filter, none !important);
+            @include vendor(filter, none !important);
             
             &:before, &:after {
                 background: transparent !important;
                 color: black !important;
                 text-shadow: none !important;
                 
-                .vendor(filter, none !important);
+                @include vendor(filter, none !important);
             }
         }
         
@@ -107,5 +107,3 @@
         }
     }
 }
-
-.use-print(@use-print); 

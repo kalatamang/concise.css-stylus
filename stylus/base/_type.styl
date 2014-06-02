@@ -1,15 +1,15 @@
-.use-typography(@boolean) when (@boolean = true) {
+@if $use-typography == true {
     //------------------------------------//
     //  $TYPE
     //------------------------------------//
     // Links
     a {
-        color: @base-link-color; 
+        color: $base-link-color; 
         text-decoration: none;
         
         &:hover, 
 		&:visited {
-            color: lighten(@base-link-color, 10%);
+            color: lighten($base-link-color, 10%);
             cursor: pointer;
             text-decoration: underline;
         }
@@ -25,11 +25,11 @@
     // Sizing
     small, 
 	.small {
-        .font-size(@small-size); 
+        @include font-size($small-size); 
     }
 
     .mico { 
-        .font-size(@micro-size); 
+        @include font-size($micro-size); 
     }
 
 
@@ -43,8 +43,7 @@
 
     // Other elements
     abbr {
-        &[title], 
-		&[data-original-title] {
+        &[title], &[data-original-title] {
             cursor: help;
             border-bottom: 1px dotted #999;
         }
@@ -63,5 +62,3 @@
         padding: 1px 4px;
     }
 }
-
-.use-typography(@use-typography); 

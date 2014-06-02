@@ -1,4 +1,4 @@
-.use-tooltips(@boolean) when (@boolean = true) {
+@if $use-tooltips == true {
     //------------------------------------//
     //  $TOOLTIPS
     //------------------------------------//
@@ -16,9 +16,9 @@
             visibility: hidden;
             z-index: 1000000;
             
-            .vendor(transition, 0.3s ease);
+            @include vendor(transition, 0.3s ease);
             
-            .vendor(transform, translate3d(0, 0, 0));
+            @include vendor(transform, translate3d(0, 0, 0));
         }
     }
 
@@ -31,9 +31,9 @@
             visibility: hidden;
             z-index: 1000000;
             
-            .vendor(transition, 0.3s ease);
+            @include vendor(transition, 0.3s ease);
             
-            .vendor(transform, translate3d(0, 0, 0));
+            @include vendor(transform, translate3d(0, 0, 0));
         }
     }
 
@@ -87,7 +87,7 @@
         background: #383838;
         color: #fff;
         content: attr(data-hint);
-        .font-size(12px); 
+        @include font-size(12px); 
         padding: 8px 10px;
         white-space: nowrap;
     }
@@ -116,16 +116,16 @@
         &:hover {
             &:after, 
 			&:before {            
-                .vendor(transform, translateY(-8px));
+                @include vendor(transform, translateY(-8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                .vendor(transform, translateY(-8px));
+                @include vendor(transform, translateY(-8px));
                 
-                .vendor(transition, 0.3s ease);
+                @include vendor(transition, 0.3s ease);
             }
         }
     }
@@ -146,14 +146,14 @@
         &:hover {
             &:after, 
 			&:before {            
-                .vendor(transform, translateY(8px));
+                @include vendor(transform, translateY(8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                .vendor(transform, translateY(8px));
+                @include vendor(transform, translateY(8px));
             }
         }
     }
@@ -177,14 +177,14 @@
         &:hover {
             &:after, 
 			&:before {
-                .vendor(transform, translateX(8px));
+                @include vendor(transform, translateX(8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                .vendor(transform, translateX(8px));
+                @include vendor(transform, translateX(8px));
             }
         }
     }
@@ -208,21 +208,19 @@
         &:hover {
             &:after, 
 			&:before {
-                .vendor(transform, translateX(-8px));
+                @include vendor(transform, translateX(-8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                .vendor(transform, translateX(-8px));
+                @include vendor(transform, translateX(-8px));
             }
         }
     }
 
 
     // Rounded corners
-    [class*='hint-'].border-radius:after { border-radius: @border-radius; }
+    [class*='hint-'].border-radius:after { border-radius: $border-radius; }
 }
-
-.use-tooltips(@use-tooltips); 

@@ -1,147 +1,147 @@
 //------------------------------------//
-//  @BORDER-BOX
+//  $BORDER-BOX
 //------------------------------------//
 // Set to `false` if you do not wish to adopt 
-// global `box-sizing: border-box;`
-@global-border-box: true;
+// global `box-sizing = border-box;`
+$global-border-box = true
 
 
 
 
 //------------------------------------//
-//  @DEBUG
+//  $DEBUG
 //------------------------------------//
 // Enabling debug mode allows for potential issues 
 // to be visually displayed in the browser. 
-@debug-mode: false;
+$debug-mode = false
 
 
 
 
 //------------------------------------//
-//  @BASE
+//  $BASE
 //------------------------------------//
 // Base font sizes and colors
-@base-font-size:    16px;
-@base-line-height:  24px;
-@base-font-color:   #333333;
-@base-link-color:   #62b3e7;
+$base-font-size =    16px
+$base-line-height =  24px
+$base-font-color =   #333333
+$base-link-color =   #62b3e7
 
 
 // Base font-family
-@base-font-family:  FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+$base-font-family =  FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif
 
 
 // Element spacing and line-height ratio
-@base-spacing-unit: @base-line-height;
-@half-spacing-unit: (@base-spacing-unit / 2);
-@line-height-ratio: (@base-line-height / @base-font-size);
+$base-spacing-unit = $base-line-height
+$half-spacing-unit = $base-spacing-unit / 2
+$line-height-ratio = $base-line-height / $base-font-size;
 
  
 
 
 //------------------------------------//
-//  @RESPONSIVE
+//  $RESPONSIVE
 //------------------------------------//
 // Breakpoints
-@extra-small-start: 30em;
-@small-start:       48em;
-@medium-start:      60em;
-@large-start:       70em;
-@extra-large-start: 80em;
+$extra-small-start = 30em
+$small-start =       48em
+$medium-start =      60em
+$large-start =       70em
+$extra-large-start = 80em
 
 
 
 
 //------------------------------------//
-//  @FONT-SIZES
+//  $FONT-SIZES
 //------------------------------------//
 // Font-sizes (in pixels)
-@giga-size: 96px;
-@mega-size: 72px;
-@kilo-size: 64px;
+$giga-size = 96px
+$mega-size = 72px
+$kilo-size = 64px
 
-@h1-size: 36px;
-@h2-size: 30px;
-@h3-size: 24px;
-@h4-size: 20px;
-@h5-size: 16px;
-@h6-size: 14px;
+$h1-size = 36px
+$h2-size = 30px
+$h3-size = 24px
+$h4-size = 20px
+$h5-size = 16px
+$h6-size = 14px
 
-@small-size: 12px;
-@micro-size: 10px;
+$small-size = 12px
+$micro-size = 10px
 
 
 
 
 //------------------------------------//
-//  @COLORS
+//  $COLORS
 //------------------------------------//
 // Background colors
-@bg-white:        #ffffff;
-@bg-black:        #222222;
-@bg-light-gray:   #f9f9f9;
-@bg-gray:         #999999;
-@bg-light-green:  #dff0d8;
-@bg-green:        #5cb85c;
-@bg-light-blue:   #d9edf7;
-@bg-blue:         #5bc0de;
-@bg-light-yellow: #fcf8e3;
-@bg-yellow:       #ed9c28;
-@bg-light-red:    #f2dede;
-@bg-red:          #d9534f;
+$bg-white =        #ffffff
+$bg-black =        #222222
+$bg-light-gray =   #f9f9f9
+$bg-gray =         #999999
+$bg-light-green =  #dff0d8
+$bg-green =        #5cb85c
+$bg-light-blue =   #d9edf7
+$bg-blue =         #5bc0de
+$bg-light-yellow = #fcf8e3
+$bg-yellow =       #ed9c28
+$bg-light-red =    #f2dede
+$bg-red =          #d9534f
 
 
 // Type colors
-@color-white:  #ffffff;
-@color-black:  #222222;
-@color-gray:   #999999;
-@color-green:  #468847;
-@color-blue:   #3a87ad;
-@color-red:    #d2322d;
-@color-yellow: #c09853;
+$color-white =  #ffffff
+$color-black =  #222222
+$color-gray =   #999999
+$color-green =  #468847
+$color-blue =   #3a87ad
+$color-red =    #d2322d
+$color-yellow = #c09853
 
 
 // Selection colors
-@selection-background: #666666;
-@selection-color:      #ffffff;
+$selection-background = #666666
+$selection-color =      #ffffff
 
 
 // Form placeholder colors
-@placeholder-color: #bbbbbb;
+$placeholder-color = #bbbbbb
 
 
 // Colors used for our objects' borders, etc
-@object-ui-color: #ededed;
+$object-ui-color = #ededed
  
 
 
 
 //------------------------------------//
-//  @OBJECTS
+//  $OBJECTS
 //------------------------------------//
 // Gutter size 
-@gutters: 2%;
+$gutters = 2%
 
 
 // Prefix for grid columns. By default columns
 // are formatted as `.column-8`
-@column-prefix: column-;
+$column-prefix = "column-"
 
 
 // Dictate how many columns you would like your 
 // grid system to use. Default is 16.
-@column-number:  16; 
+$column-number =  16 
 
 
 // Border radius value for `.border-radius` class
-@border-radius: 4px;
+$border-radius = 4px
 
 
 
 
 //------------------------------------//
-//  @INCLUDE
+//  $INCLUDE
 //------------------------------------//
 // Set whatever components you want included
 // in your project to `true` and any components
@@ -149,43 +149,43 @@
 
 
 // Utility
-@use-normalize:   true;
-@use-clearfix:    true;
-@use-shared:      true;
+$use-normalize =   true
+$use-clearfix =    true
+$use-shared =      true
 
 
 // Base
-@use-main:        true;
-@use-selection:   true;
-@use-container:   true;
-@use-typography:  true;
-@use-headings:    true;
-@use-blockquotes: true;
-@use-lists:       true;
-@use-tables:      true;
-@use-forms:       true;
-@use-grid:        true;
+$use-main =        true
+$use-selection =   true
+$use-container =   true
+$use-typography =  true
+$use-headings =    true
+$use-blockquotes = true
+$use-lists =       true
+$use-tables =      true
+$use-forms =       true
+$use-grid =        true
   // Using push and pull classes for grid
   // columns takes a lot of code. Set to
   // `true` if needed.
-  @use-push:	  false;
-  @use-pull:	  false;
+  $use-push =	  false
+  $use-pull =	  false
 
   
 // Objects and abstractions
-@use-colors:      true;
-@use-buttons:     true;
-@use-groups:      true;
-@use-dropdowns:   true;
-@use-navigation:  true;
-@use-breadcrumbs: true;
-@use-wells:       true;
-@use-badges:      true;
-@use-progress:    true;
-@use-tooltips:    true;
+$use-colors =      true
+$use-buttons =     true
+$use-groups =      true
+$use-dropdowns =   true
+$use-navigation =  true
+$use-breadcrumbs = true
+$use-wells =       true
+$use-badges =      true
+$use-progress =    true
+$use-tooltips =    true
 
 
 // Helpers
-@use-helper:      true;
-@use-conditional: true;
-@use-print:       true;
+$use-helper =      true
+$use-conditional = true
+$use-print =       true

@@ -1,6 +1,6 @@
-.debug-mode(@boolean) when (@boolean = true) {
+@if $debug-mode == true {
 	//------------------------------------//
-	//	@DEBUG
+	//	$DEBUG
 	//------------------------------------//
 	// Big thanks to Harry Roberts of CSS Wizardry for this great
 	// tool. https://github.com/csswizardry/inuit.css/blob/master/_inuit.scss
@@ -96,5 +96,3 @@
     // You should avoid using IDs for CSS, is this doing any styling?
 	[id]{ outline:5px solid yellow; }
 }
-
-.debug-mode(@debug-mode); 

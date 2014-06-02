@@ -1,4 +1,4 @@
-.use-forms(@boolean) when (@boolean = true) {
+@if $use-forms == true {
     //------------------------------------//
     //  $FORMS
     //------------------------------------//
@@ -12,18 +12,18 @@
         padding: 5px;
         width: 100%;
         
-        .vendor(box-sizing, border-box);
+        @include vendor(box-sizing, border-box);
     }
 
     .pure-form select[multiple] { height: auto; }
 
-    .breakpoint(extra-small) { 
+    @include breakpoint(extra-small) { 
         input, 
         select, 
         textarea { width: 90%; } 
     }
 
-    .breakpoint(small) { 
+    @include breakpoint(small) { 
         input, 
         select { width: 300px; } 
     }
@@ -56,7 +56,7 @@
         }
     }
 
-    .breakpoint(small) {	
+    @include breakpoint(small) {	
         input[type="submit"] { width: auto; }
         
         textarea { width: 400px; }
@@ -71,7 +71,7 @@
         
         legend {
             font-weight: bold;
-            .font-size(13px);
+            @include font-size(13px);
             padding: 0 10px;
         }
     }
@@ -100,14 +100,14 @@
         input, 
         select, 
         textarea, 
-        fieldset { border-radius: @border-radius; }
+        fieldset { border-radius: $border-radius; }
     }
 
 
     // Inline Form
     .form-inline label { width: auto; }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .form-inline {
             label {
                 display: inline-block;
@@ -139,7 +139,7 @@
         }
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .prepend {
             input, 
 			select { width: 300px; }
@@ -230,28 +230,26 @@
     form.border-radius .prepend input, 
 	.border-radius.prepend input, 
 	form.border-radius .prepend select, 
-	.border-radius.prepend select { border-radius: 0px @border-radius @border-radius 0; }
+	.border-radius.prepend select { border-radius: 0px $border-radius $border-radius 0; }
 
     form.border-radius .append input, 
 	.border-radius.append input, 
 	form.border-radius .append select, 
-	.border-radius.append select { border-radius: @border-radius 0 0 @border-radius; }
+	.border-radius.append select { border-radius: $border-radius 0 0 $border-radius; }
 
     form.border-radius .append .adjoined, 
-	.border-radius.append .adjoined { border-radius: 0px @border-radius @border-radius 0; }
+	.border-radius.append .adjoined { border-radius: 0px $border-radius $border-radius 0; }
 
     form.border-radius .prepend .adjoined, 
-	.border-radius.prepend .adjoined { border-radius: @border-radius 0 0 @border-radius; }
+	.border-radius.prepend .adjoined { border-radius: $border-radius 0 0 $border-radius; }
 
 
     // Placeholder text
-    ::-webkit-input-placeholder { color: @placeholder-color; }
+    ::-webkit-input-placeholder { color: $placeholder-color; }
 
-    :-ms-input-placeholder { color: @placeholder-color; }
+    :-ms-input-placeholder { color: $placeholder-color; }
 
-    ::-moz-placeholder { color: @placeholder-color; }
+    ::-moz-placeholder { color: $placeholder-color; }
 
-    :-moz-placeholder { color: @placeholder-color; }
+    :-moz-placeholder { color: $placeholder-color; }
 }
-
-.use-forms(@use-forms); 

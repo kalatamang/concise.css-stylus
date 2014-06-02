@@ -1,4 +1,4 @@
-.use-headings(@boolean) when (@boolean = true) {
+@if $use-headings == true {
     //------------------------------------//
     //  $HEADINGS
     //------------------------------------//
@@ -10,78 +10,78 @@
     }
 
     h1, .h1 {
-        .font-size(24px); 
+        @include font-size(24px); 
     }
 
     h2, .h2 {
-        .font-size(20px); 
+        @include font-size(20px); 
     }
 
     h3, .h3 {
-        .font-size(18px); 
+        @include font-size(18px); 
     }
 
     h4, .h4 {
-        .font-size(16px); 
+        @include font-size(16px); 
     }
 
     h5, .h5 {
-        .font-size(14px); 
+        @include font-size(14px); 
     }
 
     h6, .h6 {
-        .font-size(12px); 
+        @include font-size(12px); 
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         h1, .h1 {
-            .font-size(32px); 
+            @include font-size(32px); 
         }
         
         h2, .h2 {
-            .font-size(24px); 
+            @include font-size(24px); 
         }
         
         h3, .h3 {
-            .font-size(20px); 
+            @include font-size(20px); 
         }
         
         h4, .h4 {
-            .font-size(18px); 
+            @include font-size(18px); 
         }
         
         h5, .h5 {
-            .font-size(16px); 
+            @include font-size(16px); 
         }
         
         h6, .h6 {
-            .font-size(14px); 
+            @include font-size(14px); 
         }
     }
 
-    .breakpoint(medium) {
+    @include breakpoint(medium) {
         h1, .h1 {
-            .font-size(@h1-size); 
+            @include font-size($h1-size); 
         }
         
         h2, .h2 {
-            .font-size(@h2-size); 
+            @include font-size($h2-size); 
         }
         
         h3, .h3 {
-            .font-size(@h3-size); 
+            @include font-size($h3-size); 
         }
         
         h4, .h4 {
-            .font-size(@h4-size); 
+            @include font-size($h4-size); 
         }
         
         h5, .h5 {
-            .font-size(@h5-size); 
+            @include font-size($h5-size); 
         }
         
         h6, .h6 {
-            .font-size(@h6-size); 
+            @include font-size($h6-size); 
         }
     }
 
@@ -99,58 +99,56 @@
 
     // Extra-large heading classes
     .giga {
-        .font-size(48px); 
+        @include font-size(48px); 
     }
 
     .mega {
-        .font-size(40px); 
+        @include font-size(40px); 
     }
 
     .kilo {
-        .font-size(32px); 
+        @include font-size(32px); 
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .giga {
-            .font-size(64px); 
+            @include font-size(64px); 
         }
         
         .mega {
-            .font-size(48px); 
+            @include font-size(48px); 
         }
         
         .kilo {
-            .font-size(32px); 
+            @include font-size(32px); 
         }
     }
 
-    .breakpoint(large) {
+    @include breakpoint(large) {
         .giga {
-            .font-size(80px); 
+            @include font-size(80px); 
         }
         
         .mega {
-            .font-size(64px); 
+            @include font-size(64px); 
         }
         
         .kilo {
-            .font-size(48px); 
+            @include font-size(48px); 
         }
     }
 
-    .breakpoint(extra-large) {
+    @include breakpoint(extra-large) {
         .giga {
-            .font-size(@giga-size); 
+            @include font-size($giga-size); 
         }
         
         .mega {
-            .font-size(@mega-size); 
+            @include font-size($mega-size); 
         }
         
         .kilo {
-            .font-size(@kilo-size); 
+            @include font-size($kilo-size); 
         }
     }
 }
-
-.use-headings(@use-headings); 

@@ -1,23 +1,21 @@
-.use-selection(@boolean) when (@boolean = true) {
+@if $use-selection == true {
     //------------------------------------//
     //  $SELECTION
     //------------------------------------//
     * {
         &::-webkit-selection {
-            background-color: @selection-background;
-            color: @selection-color;
+            background-color: $selection-background;
+            color: $selection-color;
         }
         
         &::-moz-selection {
-            background-color: @selection-background;
-            color: @selection-color;
+            background-color: $selection-background;
+            color: $selection-color;
         }
         
         &::selection {
-            background-color: @selection-background;
-            color: @selection-color;
+            background-color: $selection-background;
+            color: $selection-color;
         }
     }
 }
-
-.use-selection(@use-selection); 

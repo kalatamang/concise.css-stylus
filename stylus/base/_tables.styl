@@ -1,4 +1,4 @@
-.use-tables(@boolean) when (@boolean = true) {
+@if $use-tables == true {
     //------------------------------------//
     //  $TABLES
     //------------------------------------//
@@ -26,13 +26,13 @@
         
         
         // Background colors
-        .bg-light-green { color: @color-green; }
+        .bg-light-green { color: $color-green; }
         
-        .bg-light-blue { color: @color-blue; }
+        .bg-light-blue { color: $color-blue; }
         
-        .bg-light-yellow { color: @color-yellow; }
+        .bg-light-yellow { color: $color-yellow; }
         
-        .bg-light-red { color: @color-red; }
+        .bg-light-red { color: $color-red; }
         
         
         // Full-width table
@@ -63,7 +63,7 @@
 		&.fill-odd tbody tr:nth-child(odd) { background-color: #f9f9f9; }
     }
 
-    .breakpoint(extra-small) {
+    @include breakpoint(extra-small) {
         table.table {
             width: auto;
             
@@ -80,5 +80,3 @@
         table { margin-bottom: 0; }
     }
 }
-
-.use-tables(@use-tables); 

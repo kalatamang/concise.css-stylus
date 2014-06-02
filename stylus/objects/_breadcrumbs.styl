@@ -1,9 +1,9 @@
-.use-breadcrumbs(@boolean) when (@boolean = true) {
+@if $use-breadcrumbs == true {
     //------------------------------------//
     //  $BREADCRUMBS
     //------------------------------------//
     .breadcrumbs {
-        .font-size(13px);
+        @include font-size(13px);
         margin: 12px 0;
         padding: 5px 15px 5px 0;
         
@@ -33,5 +33,3 @@
         &.well { padding-left: 15px; }
     }
 }
-
-.use-breadcrumbs(@use-breadcrumbs); 

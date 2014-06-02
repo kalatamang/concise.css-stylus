@@ -1,4 +1,4 @@
-.use-conditional(@boolean) when (@boolean = true) {
+@if $use-conditional == true {
     //------------------------------------//
     //  $CONDITIONAL
     //------------------------------------//
@@ -20,7 +20,7 @@
         visibility: hidden;
     }
 
-    .breakpoint(small) {
+    @include breakpoint(small) {
         .show-medium, 
 		.hide-small, 
 		.hide-large {
@@ -36,7 +36,7 @@
         }
     }
 
-    .breakpoint(large) {
+    @include breakpoint(large) {
         .show-large, 
 		.hide-small, 
 		.hide-medium {
@@ -68,5 +68,3 @@
         }
     }
 }
-
-.use-conditional(@use-conditional); 
