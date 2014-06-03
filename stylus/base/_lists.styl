@@ -9,7 +9,7 @@
 
     ol { padding-left: 15px; }
 
-    @include breakpoint(extra-small) { ol { padding-left: 20px; } }
+    breakpoint(extra-small) { ol { padding-left: 20px; } }
 
     ul li, 
 	ol li {
@@ -31,7 +31,7 @@
         ol { list-style-type: lower-roman; }
     }
 
-    @include breakpoint(small) { ul li ul { margin-left: 20px; } }
+    breakpoint(small) { ul li ul { margin-left: 20px; } }
 
 
     // Unstyled
@@ -69,7 +69,7 @@
         }
     }
 
-    @include breakpoint(extra-small) {
+    breakpoint(extra-small) {
         .list-inline li {
             display: inline;
             margin-right: 25px;
@@ -104,7 +104,7 @@
 
     dd { margin-left: 0px; }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         dl.horizontal {
             overflow: hidden;
             > {

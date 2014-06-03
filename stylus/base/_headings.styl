@@ -10,78 +10,78 @@
     }
 
     h1, .h1 {
-        @include font-size(24px); 
+        font-size(24px); 
     }
 
     h2, .h2 {
-        @include font-size(20px); 
+        font-size(20px); 
     }
 
     h3, .h3 {
-        @include font-size(18px); 
+        font-size(18px); 
     }
 
     h4, .h4 {
-        @include font-size(16px); 
+        font-size(16px); 
     }
 
     h5, .h5 {
-        @include font-size(14px); 
+        font-size(14px); 
     }
 
     h6, .h6 {
-        @include font-size(12px); 
+        font-size(12px); 
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         h1, .h1 {
-            @include font-size(32px); 
+            font-size(32px); 
         }
         
         h2, .h2 {
-            @include font-size(24px); 
+            font-size(24px); 
         }
         
         h3, .h3 {
-            @include font-size(20px); 
+            font-size(20px); 
         }
         
         h4, .h4 {
-            @include font-size(18px); 
+            font-size(18px); 
         }
         
         h5, .h5 {
-            @include font-size(16px); 
+            font-size(16px); 
         }
         
         h6, .h6 {
-            @include font-size(14px); 
+            font-size(14px); 
         }
     }
 
-    @include breakpoint(medium) {
+    breakpoint(medium) {
         h1, .h1 {
-            @include font-size($h1-size); 
+            font-size($h1-size); 
         }
         
         h2, .h2 {
-            @include font-size($h2-size); 
+            font-size($h2-size); 
         }
         
         h3, .h3 {
-            @include font-size($h3-size); 
+            font-size($h3-size); 
         }
         
         h4, .h4 {
-            @include font-size($h4-size); 
+            font-size($h4-size); 
         }
         
         h5, .h5 {
-            @include font-size($h5-size); 
+            font-size($h5-size); 
         }
         
         h6, .h6 {
-            @include font-size($h6-size); 
+            font-size($h6-size); 
         }
     }
 
@@ -99,56 +99,56 @@
 
     // Extra-large heading classes
     .giga {
-        @include font-size(48px); 
+        font-size(48px); 
     }
 
     .mega {
-        @include font-size(40px); 
+        font-size(40px); 
     }
 
     .kilo {
-        @include font-size(32px); 
+        font-size(32px); 
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .giga {
-            @include font-size(64px); 
+            font-size(64px); 
         }
         
         .mega {
-            @include font-size(48px); 
+            font-size(48px); 
         }
         
         .kilo {
-            @include font-size(32px); 
+            font-size(32px); 
         }
     }
 
-    @include breakpoint(large) {
+    breakpoint(large) {
         .giga {
-            @include font-size(80px); 
+            font-size(80px); 
         }
         
         .mega {
-            @include font-size(64px); 
+            font-size(64px); 
         }
         
         .kilo {
-            @include font-size(48px); 
+            font-size(48px); 
         }
     }
 
-    @include breakpoint(extra-large) {
+    breakpoint(extra-large) {
         .giga {
-            @include font-size($giga-size); 
+            font-size($giga-size); 
         }
         
         .mega {
-            @include font-size($mega-size); 
+            font-size($mega-size); 
         }
         
         .kilo {
-            @include font-size($kilo-size); 
+            font-size($kilo-size); 
         }
     }
 }

@@ -13,14 +13,14 @@
     }
 
     [class*='#{$column-prefix}'] {
-        @include vendor(background-clip, padding-box !important);
+        vendor(background-clip, padding-box !important);
         
 		&.right { float: right; }
 		
         img { max-width: 100%; }
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         [class*='#{$column-prefix}'] { float: left; }
         
         .gutters [class*='#{$column-prefix}'] {
@@ -31,14 +31,14 @@
         
         
         // Row columns        
-		@include grid-setup();
+		grid-setup();
         
 		
 		// Push
         @if $use-push == true {
 			[class*='push-'] { position: relative; }
 			
-			@include push-setup(); 
+			push-setup(); 
 		}
         
 		
@@ -46,7 +46,7 @@
         @if $use-pull == true {
 			[class*='pull-'] { position: relative; }
 			
-			@include pull-setup();
+			pull-setup();
 		}
     }
 

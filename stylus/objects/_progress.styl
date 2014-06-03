@@ -5,25 +5,25 @@
     .progress {
         background-color: #f9f9f9;
         color: #fff;
-        @include font-size(11px); 
+        font-size(11px); 
         height: 12px;
         margin: 6px 0;
         position: relative;
         text-align: center;
         width: 100%;
         
-        @include vendor(box-shadow, inset 0 1px 1px rgba(100, 100, 100, 0.1));
+        vendor(box-shadow, inset 0 1px 1px rgba(100, 100, 100, 0.1));
         
-        @include vendor(box-sizing, initial);
+        vendor(box-sizing, initial);
     }
 
     .progress-small {
-        @include font-size(9px); 
+        font-size(9px); 
         height: 6px;
     }
 
     .progress-large {
-        @include font-size($base-font-size); 
+        font-size($base-font-size); 
         height: 25px;
     }
 
@@ -73,7 +73,7 @@
                 top: 0;
                 z-index: 1;
 
-                @include vendor(background-size, 50px 50px);
+                vendor(background-size, 50px 50px);
                 
                 background-image: 
                     -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, rgba(255, 255, 255, 0.2)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.75, rgba(255, 255, 255, 0.2)), color-stop(0.75, transparent), to(transparent));
@@ -86,7 +86,7 @@
         // Animated 
         &.animate > span {
             &:after, > span {             
-                @include vendor(animation, move 2s linear infinite);
+                vendor(animation, move 2s linear infinite);
             }
         }
     }

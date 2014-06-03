@@ -16,9 +16,9 @@
             visibility: hidden;
             z-index: 1000000;
             
-            @include vendor(transition, 0.3s ease);
+            vendor(transition, 0.3s ease);
             
-            @include vendor(transform, translate3d(0, 0, 0));
+            vendor(transform, translate3d(0, 0, 0));
         }
     }
 
@@ -31,9 +31,9 @@
             visibility: hidden;
             z-index: 1000000;
             
-            @include vendor(transition, 0.3s ease);
+            vendor(transition, 0.3s ease);
             
-            @include vendor(transform, translate3d(0, 0, 0));
+            vendor(transform, translate3d(0, 0, 0));
         }
     }
 
@@ -87,7 +87,7 @@
         background: #383838;
         color: #fff;
         content: attr(data-hint);
-        @include font-size(12px); 
+        font-size(12px); 
         padding: 8px 10px;
         white-space: nowrap;
     }
@@ -116,16 +116,16 @@
         &:hover {
             &:after, 
 			&:before {            
-                @include vendor(transform, translateY(-8px));
+                vendor(transform, translateY(-8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                @include vendor(transform, translateY(-8px));
+                vendor(transform, translateY(-8px));
                 
-                @include vendor(transition, 0.3s ease);
+                vendor(transition, 0.3s ease);
             }
         }
     }
@@ -146,14 +146,14 @@
         &:hover {
             &:after, 
 			&:before {            
-                @include vendor(transform, translateY(8px));
+                vendor(transform, translateY(8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                @include vendor(transform, translateY(8px));
+                vendor(transform, translateY(8px));
             }
         }
     }
@@ -177,14 +177,14 @@
         &:hover {
             &:after, 
 			&:before {
-                @include vendor(transform, translateX(8px));
+                vendor(transform, translateX(8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                @include vendor(transform, translateX(8px));
+                vendor(transform, translateX(8px));
             }
         }
     }
@@ -208,14 +208,14 @@
         &:hover {
             &:after, 
 			&:before {
-                @include vendor(transform, translateX(-8px));
+                vendor(transform, translateX(-8px));
             }
         }
         
         &:focus {
             &:after, 
 			&:before {
-                @include vendor(transform, translateX(-8px));
+                vendor(transform, translateX(-8px));
             }
         }
     }

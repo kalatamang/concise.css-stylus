@@ -23,11 +23,11 @@
         
         -webkit-touch-callout: none;
         
-        @include vendor(user-select, none);
+        vendor(user-select, none);
         
-        @include vendor(user-drag, none);
+        vendor(user-drag, none);
         
-        @include vendor(transition, all 0.3s);
+        vendor(transition, all 0.3s);
         
         &::-moz-focus-inner {
             padding: 0;
@@ -76,7 +76,7 @@
         }
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .btn {
             display: inline-block;
             *display: inline;
@@ -89,7 +89,7 @@
 		a.btn-extra-small, 
 		p.btn-extra-small, 
 		input.btn-extra-small {
-            @include font-size(11px); 
+            font-size(11px); 
             padding: 5px 16px;
         }
         
@@ -97,7 +97,7 @@
 		a.btn-small, 
 		p.btn-small, 
 		input.btn-small {
-            @include font-size(12px); 
+            font-size(12px); 
             padding: 10px 32px;
         }
         
@@ -265,7 +265,7 @@
         }
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .btn-extra-small .caret, 
 		.btn-small .caret {
             border-top: 4px solid;

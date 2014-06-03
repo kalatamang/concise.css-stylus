@@ -12,18 +12,18 @@
         padding: 5px;
         width: 100%;
         
-        @include vendor(box-sizing, border-box);
+        vendor(box-sizing, border-box);
     }
 
     .pure-form select[multiple] { height: auto; }
 
-    @include breakpoint(extra-small) { 
+    breakpoint(extra-small) { 
         input, 
         select, 
         textarea { width: 90%; } 
     }
 
-    @include breakpoint(small) { 
+    breakpoint(small) { 
         input, 
         select { width: 300px; } 
     }
@@ -56,7 +56,7 @@
         }
     }
 
-    @include breakpoint(small) {	
+    breakpoint(small) {	
         input[type="submit"] { width: auto; }
         
         textarea { width: 400px; }
@@ -71,7 +71,7 @@
         
         legend {
             font-weight: bold;
-            @include font-size(13px);
+            font-size(13px);
             padding: 0 10px;
         }
     }
@@ -107,7 +107,7 @@
     // Inline Form
     .form-inline label { width: auto; }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .form-inline {
             label {
                 display: inline-block;
@@ -139,7 +139,7 @@
         }
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .prepend {
             input, 
 			select { width: 300px; }

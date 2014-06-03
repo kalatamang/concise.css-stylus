@@ -22,7 +22,7 @@
             text-transform: none;
             z-index: 99999;
             
-            @include vendor(transition, all 0.3s ease-in);
+            vendor(transition, all 0.3s ease-in);
             
             a { text-decoration: none; }
             
@@ -56,7 +56,7 @@
                 display: block;
                 padding: 5px 10px;
                 
-                @include vendor(transition, all 0.3s ease-out);
+                vendor(transition, all 0.3s ease-out);
             }
             
             
@@ -80,13 +80,13 @@
             cursor: default;
             font-size: 14px;
             font-size: 0.9rem;
-            @include font-size(14px); 
+            font-size(14px); 
             margin: 12px 0 0;
             padding: 0 0 0 9px;
         }
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .dropdown {
             .dropdown-menu { width: 200px; }
             

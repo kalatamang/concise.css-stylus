@@ -252,7 +252,7 @@
         .dropdown .dropdown-menu { top: 100%; }
     }
 
-    @include breakpoint(small) {
+    breakpoint(small) {
         .nav-vertical .dropdown .dropdown-menu {
             left: 100%;
             top: 0;
@@ -266,11 +266,11 @@
             color: inherit;
             cursor: pointer;
             display: none;
-            @include font-size(24px); 
+            font-size(24px); 
             text-align: right;
             text-transform: uppercase;
             
-            @include vendor(user-select, none);
+            vendor(user-select, none);
         }
         
         .naver-wrapper { height: auto; }
