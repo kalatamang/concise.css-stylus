@@ -1,154 +1,117 @@
-@if $use-headings == true {
+@if $use-headings == true
     //------------------------------------//
     //  $HEADINGS
     //------------------------------------//
     h1, h2, h3, h4, h5, h6, 
     .h1, .h2, .h3, .h4, .h5, .h6,
-    .giga, .mega, .kilo {
-        color: #181818;
-        font-weight: normal;
-    }
+    .giga, .mega, .kilo
+        color: #181818
+        font-weight: normal
+   
+    h1, .h1
+        font-size(24px) 
 
-    h1, .h1 {
-        font-size(24px); 
-    }
+    h2, .h2
+        font-size(20px) 
 
-    h2, .h2 {
-        font-size(20px); 
-    }
+    h3, .h3
+        font-size(18px) 
 
-    h3, .h3 {
-        font-size(18px); 
-    }
+    h4, .h4
+        font-size(16px) 
+  
+    h5, .h5
+        font-size(14px) 
 
-    h4, .h4 {
-        font-size(16px); 
-    }
+    h6, .h6
+        font-size(12px) 
+   
+    breakpoint(small)
+        h1, .h1
+            font-size(32px)     
+        
+        h2, .h2
+            font-size(24px) 
+       
+        h3, .h3
+            font-size(20px) 
+        
+        h4, .h4
+            font-size(18px) 
+       
+        h5, .h5
+            font-size(16px) 
+        
+        h6, .h6
+            font-size(14px) 
 
-    h5, .h5 {
-        font-size(14px); 
-    }
-
-    h6, .h6 {
-        font-size(12px); 
-    }
-
-    breakpoint(small) {
-        h1, .h1 {
-            font-size(32px); 
-        }
+    breakpoint(medium)
+        h1, .h1
+            font-size($h1-size) 
+       
+        h2, .h2
+            font-size($h2-size) 
+       
+        h3, .h3
+            font-size($h3-size) 
         
-        h2, .h2 {
-            font-size(24px); 
-        }
-        
-        h3, .h3 {
-            font-size(20px); 
-        }
-        
-        h4, .h4 {
-            font-size(18px); 
-        }
-        
-        h5, .h5 {
-            font-size(16px); 
-        }
-        
-        h6, .h6 {
-            font-size(14px); 
-        }
-    }
-
-    breakpoint(medium) {
-        h1, .h1 {
-            font-size($h1-size); 
-        }
-        
-        h2, .h2 {
-            font-size($h2-size); 
-        }
-        
-        h3, .h3 {
-            font-size($h3-size); 
-        }
-        
-        h4, .h4 {
-            font-size($h4-size); 
-        }
-        
-        h5, .h5 {
-            font-size($h5-size); 
-        }
-        
-        h6, .h6 {
-            font-size($h6-size); 
-        }
-    }
-
+        h4, .h4
+            font-size($h4-size) 
+       
+        h5, .h5
+            font-size($h5-size) 
+       
+        h6, .h6
+            font-size($h6-size) 
+       
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
     .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a,
-    .giga a, .mega a, .kilo a { font-weight: inherit; }
+    .giga a, .mega a, .kilo a 
+        font-weight: inherit
 
     h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, 
     .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, 
-    .giga small, .mega small, .kilo small {
-        font-size: 65%;
-        line-height: 1;
-    }
-
+    .giga small, .mega small, .kilo small
+        font-size: 65%
+        line-height: 1
+   
 
     // Extra-large heading classes
-    .giga {
-        font-size(48px); 
-    }
+    .giga
+        font-size(48px) 
+  
+    .mega
+        font-size(40px) 
+   
+    .kilo
+        font-size(32px)   
 
-    .mega {
-        font-size(40px); 
-    }
+    breakpoint(small)
+        .giga
+            font-size(64px) 
+       
+        .mega
+            font-size(48px) 
+       
+        .kilo
+            font-size(32px) 
+       
+    breakpoint(large)
+        .giga
+            font-size(80px) 
+        
+        .mega
+            font-size(64px) 
+        
+        .kilo
+            font-size(48px) 
 
-    .kilo {
-        font-size(32px); 
-    }
-
-    breakpoint(small) {
-        .giga {
-            font-size(64px); 
-        }
+    breakpoint(extra-large)
+        .giga
+            font-size($giga-size) 
         
-        .mega {
-            font-size(48px); 
-        }
+        .mega
+            font-size($mega-size) 
         
-        .kilo {
-            font-size(32px); 
-        }
-    }
-
-    breakpoint(large) {
-        .giga {
-            font-size(80px); 
-        }
-        
-        .mega {
-            font-size(64px); 
-        }
-        
-        .kilo {
-            font-size(48px); 
-        }
-    }
-
-    breakpoint(extra-large) {
-        .giga {
-            font-size($giga-size); 
-        }
-        
-        .mega {
-            font-size($mega-size); 
-        }
-        
-        .kilo {
-            font-size($kilo-size); 
-        }
-    }
-}
+        .kilo
+            font-size($kilo-size) 

@@ -1,21 +1,16 @@
-@if $use-selection == true {
+@if $use-selection == true
     //------------------------------------//
     //  $SELECTION
     //------------------------------------//
-    * {
-        &::-webkit-selection {
-            background-color: $selection-background;
-            color: $selection-color;
-        }
+    *
+        &::-webkit-selection
+            background-color: $selection-background
+            color: $selection-color
+       
+        &::-moz-selection
+            background-color: $selection-background
+            color: $selection-color
         
-        &::-moz-selection {
-            background-color: $selection-background;
-            color: $selection-color;
-        }
-        
-        &::selection {
-            background-color: $selection-background;
-            color: $selection-color;
-        }
-    }
-}
+        &::selection
+            background-color: $selection-background
+            color: $selection-color

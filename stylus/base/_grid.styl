@@ -1,67 +1,66 @@
-@if $use-grid == true {
+@if $use-grid == true
     //------------------------------------//
     //  $GRID
     //------------------------------------//
-    .row {
-        width: 100%;
+    .row
+        width: 100%
         
-        &:after {
-            clear: both;
-            content: " ";
-            display: table;
-        }
-    }
-
-    [class*='#{$column-prefix}'] {
-        vendor(background-clip, padding-box !important);
+        &:after
+            clear: both
+            content: " "
+            display: table
+       
+    [class*='#$column-prefix']
+        vendor(background-clip, padding-box !important)
         
-		&.right { float: right; }
+		&.right 
+            float: right
 		
-        img { max-width: 100%; }
-    }
-
-    breakpoint(small) {
-        [class*='#{$column-prefix}'] { float: left; }
+        img 
+            max-width: 100%
+   
+    breakpoint(small)
+        [class*='#$column-prefix'] 
+            float: left
         
-        .gutters [class*='#{$column-prefix}'] {
-            margin-left: $gutters;
+        .gutters [class*='#$column-prefix']
+            margin-left: $gutters
             
-            &:first-child { margin-left: 0; }
-        }
-        
+            &:first-child 
+                margin-left: 0
+       
         
         // Row columns        
-		grid-setup();
+		grid-setup()
         
 		
 		// Push
-        @if $use-push == true {
-			[class*='push-'] { position: relative; }
+        @if $use-push == true
+			[class*='push-'] 
+                position: relative
 			
-			push-setup(); 
-		}
-        
+			push-setup() 
 		
+        
 		// Pull
-        @if $use-pull == true {
-			[class*='pull-'] { position: relative; }
+        @if $use-pull == true
+			[class*='pull-'] 
+                position: relative
 			
-			pull-setup();
-		}
-    }
-
+			pull-setup()
+	
 
     // Non-responsive grid
-    .non-responsive {
-        [class*='#{$column-prefix}'] {
-            float: left;
-            width: auto !important; 
-        }
+    .non-responsive
+        [class*='#$column-prefix']
+            float: left
+            width: auto !important 
+       
         
-        .gutters [class*='#{$column-prefix}'], 
-		&.gutters [class*='#{$column-prefix}'] { margin-left: $gutters; }
+        .gutters [class*='#$column-prefix'], 
+		&.gutters [class*='#$column-prefix'] 
+            margin-left: $gutters
         
-        .gutters [class*='#{$column-prefix}']:first-child, 
-		&.gutters [class*='#{$column-prefix}']:first-child { margin-left: 0; }
-    }
-}
+        .gutters [class*='#$column-prefix']:first-child, 
+		&.gutters [class*='#$column-prefix']:first-child 
+            margin-left: 0

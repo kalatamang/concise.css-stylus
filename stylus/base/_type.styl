@@ -1,64 +1,57 @@
-@if $use-typography == true {
+@if $use-typography == true
     //------------------------------------//
     //  $TYPE
     //------------------------------------//
     // Links
-    a {
-        color: $base-link-color; 
-        text-decoration: none;
+    a
+        color: $base-link-color 
+        text-decoration: none
         
         &:hover, 
-		&:visited {
-            color: lighten($base-link-color, 10%);
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    }
-
-    p a {
-        line-height: inherit;
+		&:visited
+            color: lighten($base-link-color, 10%)
+            cursor: pointer
+            text-decoration: underline
+       
+   
+    p a
+        line-height: inherit
         
-        &:visited { line-height: inherit; }
-    }
-
+        &:visited 
+            line-height: inherit
+   
 
     // Sizing
     small, 
-	.small {
-        font-size($small-size); 
-    }
+	.small
+        font-size($small-size) 
+   
 
-    .mico { 
-        font-size($micro-size); 
-    }
-
+    .mico 
+        font-size($micro-size) 
+  
 
     // Addresses
-    address {
-        font-style: normal;
+    address
+        font-style: normal
         
-        > strong { display: block; }
-    }
-
+        > strong 
+            display: block
+   
 
     // Other elements
-    abbr {
-        &[title], &[data-original-title] {
-            cursor: help;
-            border-bottom: 1px dotted #999;
-        }
-    }
+    abbr
+        &[title], &[data-original-title]
+            cursor: help
+            border-bottom: 1px dotted #999
 
-    acronym {
-        cursor: help;
-        border-bottom: 1px dashed blue;
-    }
-
-    kbd {
-        background-color: #333;
-        border-radius: 4px;
-        color: #fff;
-        font-size: 90%;
-        padding: 1px 4px;
-    }
-}
+    acronym
+        cursor: help
+        border-bottom: 1px dashed blue
+   
+    kbd
+        background-color: #333
+        border-radius: 4px
+        color: #fff
+        font-size: 90%
+        padding: 1px 4px

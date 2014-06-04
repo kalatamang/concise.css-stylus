@@ -1,12 +1,11 @@
-@if $use-normalize == true {
+@if $use-normalize == true
     //------------------------------------//
     //  $NORMALIZE  
     //------------------------------------// 
-    html {
-        font-size: 100%;
-        vendor(text-size-adjust, 100%);
-    }
-
+    html
+        font-size: 100%
+        vendor(text-size-adjust, 100%)
+   
     article,
     aside,
     details,
@@ -18,178 +17,178 @@
     main,
     nav,
     section,
-    summary { display: block; }
+    summary 
+        display: block
 
     audio, 
     canvas, 
     progress, 
-    video {
-        display: inline-block;
-        vertical-align: baseline;
-    }
-
-    audio:not([controls]) {
-        display: none;
-        height: 0;
-    }
-
+    video
+        display: inline-block
+        vertical-align: baseline
+   
+    audio:not([controls])
+        display: none
+        height: 0
+   
     [hidden], 
-    template { display: none; }
+    template 
+        display: none
 
-    a {
-        background: transparent;
+    a
+        background: transparent
         
-        &:focus { outline: thin dotted; }
+        &:focus 
+            outline: thin dotted
         
         &:active, 
-        &:hover { outline: 0; }
-    }
+        &:hover 
+            outline: 0
 
-    abbr[title] { border-bottom: 1px dotted; }
+    abbr[title] 
+        border-bottom: 1px dotted
 
     b, 
-    strong { font-weight: bold; }
+    strong 
+        font-weight: bold
 
-    dfn { font-style: italic; }
+    dfn 
+        font-style: italic
 
-    mark {
-        background: #ff0;
-        color: #000;
-    }
-
+    mark
+        background: #ff0
+        color: #000
+   
     sub,
-    sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline;
-    }
+    sup
+        font-size: 75%
+        line-height: 0
+        position: relative
+        vertical-align: baseline
 
-    sup { top: -0.5em; }
+    sup 
+        top: -0.5em
 
-    sub { bottom: -0.25em; }
+    sub 
+        bottom: -0.25em
 
-    img { 
-        border: 0; 
-        -ms-interpolation-mode: bicubic;
-    }
+    img 
+        border: 0 
+        -ms-interpolation-mode: bicubic
+   
+    svg:not(:root) 
+        overflow: hidden
 
-    svg:not(:root) { overflow: hidden; }
+    figure 
+        margin: 1em 40px
 
-    figure { margin: 1em 40px; }
-
-    hr {
-        border: solid #eee;
-        border-width: 1px 0 0;
-        clear: both;
-        height: 0;
+    hr
+        border: solid #eee
+        border-width: 1px 0 0
+        clear: both
+        height: 0
         
-        vendor(box-sizing, content-box);
-    }
-
-    pre {
-        white-space: pre;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
-
+        vendor(box-sizing, content-box)
+   
+    pre
+        white-space: pre
+        white-space: pre-wrap
+        word-wrap: break-word
+   
     code, 
     kbd, 
     pre, 
-    samp {
-        font-family: monospace, monospace;
-        _font-family: 'courier new', monospace;
-        font-size($base-font-size);
-    }
-
-    q {
-        quotes: none;
+    samp
+        font-family: monospace, monospace
+        _font-family: 'courier new', monospace
+        font-size($base-font-size)
+   
+    q
+        quotes: none
         
         &:before,
-        &:after {
-            content: '';
-            content: none;
-        }
-    }
-
-    form { margin: 0; }
+        &:after
+            content: ''
+            content: none
+       
+    form 
+        margin: 0
 
     button, 
     input, 
     optgroup, 
     select, 
-    textarea {
-        color: inherit;
-        font: inherit;
-        margin: 0;
-        vertical-align: baseline;
-        *vertical-align: middle;
-    }
+    textarea
+        color: inherit
+        font: inherit
+        margin: 0
+        vertical-align: baseline
+        *vertical-align: middle
 
-    button { overflow: visible; }
+    button 
+        overflow: visible
 
     button,
-    select { text-transform: none; }
+    select 
+        text-transform: none
 
     button,
     html input[type="button"],
     input[type="reset"],
-    input[type="submit"] {
-        -webkit-appearance: button;
-        cursor: pointer;
-        *overflow: visible;
-    }
+    input[type="submit"]
+        -webkit-appearance: button
+        cursor: pointer
+        *overflow: visible
 
     button[disabled], 
-    html input[disabled] { cursor: default; }
+    html input[disabled] 
+        cursor: default
 
     button::-moz-focus-inner,
-    input::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+    input::-moz-focus-inner
+        border: 0
+        padding: 0
 
-    input {
-        line-height: normal;
+    input
+        line-height: normal
         
         &[type="checkbox"], 
-        &[type="radio"] {
-            box-sizing: border-box;
-            padding: 0;
-        }
+        &[type="radio"]
+            box-sizing: border-box
+            padding: 0
         
-        &[type="number"] {
+        &[type="number"]
             &::-webkit-inner-spin-button, 
-            &::-webkit-outer-spin-button { height: auto; }
-        }
+            &::-webkit-outer-spin-button 
+                height: auto
         
-        &[type="search"] {
-            -webkit-appearance: textfield;        
-            vendor(box-sizing, content-box);
+        &[type="search"]
+            -webkit-appearance: textfield        
+            vendor(box-sizing, content-box)
             
             &::-webkit-search-cancel-button, 
-            &::-webkit-search-decoration { -webkit-appearance: none; }
-        }
-    }
+            &::-webkit-search-decoration 
+                -webkit-appearance: none
+       
+    fieldset 
+        margin: 0 2px
 
-    fieldset { margin: 0 2px; }
+    legend
+        border: 0
+        padding: 0
+        white-space: normal
+        *margin-left: -7px
 
-    legend {
-        border: 0;
-        padding: 0;
-        white-space: normal;
-        *margin-left: -7px;
-    }
+    textarea 
+        overflow: auto
 
-    textarea { overflow: auto; }
+    optgroup 
+        font-weight: bold
 
-    optgroup { font-weight: bold; }
-
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
+    table
+        border-collapse: collapse
+        border-spacing: 0
 
     td, 
-    th { padding: 0; }
-}
+    th 
+        padding: 0
