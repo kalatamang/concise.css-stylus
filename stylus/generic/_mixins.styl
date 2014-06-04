@@ -9,7 +9,7 @@
     font-size: $font-size;
     font-size: ($font-size / $base-font-size) * 1rem;
 	
-    @if $line-height == true {
+    if $line-height == true {
         line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
     }
 }
@@ -40,7 +40,7 @@ vendor(property, value)
 // 
 // 
 @mixin breakpoint($point) {
-	@if $point == extra-small {
+	if $point == extra-small {
         @media (min-width: $extra-small-start)  { @content; }
     }
 	
@@ -81,7 +81,7 @@ vendor(property, value)
 	
 	@for $i from 1 through $number { 
 		// Style all but the last column
-		@if $i != $column-number {
+		if $i != $column-number {
 			.gutters .#{$column-prefix + $i} { width: 100% / $number * $i - $gutters; }
 		} @else {
 		// Ensure the last column has a width of 100%
