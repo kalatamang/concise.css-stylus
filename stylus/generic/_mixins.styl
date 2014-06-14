@@ -2,15 +2,15 @@
 // Passing in a single value will create font-sizing in 
 // pixels, rems as well as a proper line-height.
 // 
-//    `font-size(24px);`
+//    `font-size(24px)`
 // 
 // 
 font-size($font-size, $line-height:true) 
-    font-size: $font-size;
-    font-size: ($font-size / $base-font-size) * 1rem;
+    font-size: $font-size
+    font-size: ($font-size / $base-font-size) * 1rem
 	
     if $line-height == true 
-        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size)
     
 
 // 
@@ -21,11 +21,11 @@ font-size($font-size, $line-height:true)
 // 
 // 
 vendor(property, value)
-    -webkit-property value
-    -moz-property value
-    -ms-property value
-    -o-property value
-    property value
+    -webkit-property: value
+    -moz-property: value
+    -ms-property: value
+    -o-property: value
+    property: value
 
 
 //
@@ -34,7 +34,7 @@ vendor(property, value)
 // create styles that are built from the ground-up to be 
 // mobile friendly.
 // 
-//    `breakpoint(extra-small)  [styles here] `
+//    `breakpoint(extra-small) [styles here] `
 // 
 // 
 breakpoint($point) 
@@ -82,7 +82,7 @@ grid-setup($number: $column-number)
 			.gutters .#$column-prefix + $i  
                 width: 100% / $number * $i - $gutters; 
 		 @else 
-		// Ensure the last column has a width of 100%
+            // Ensure the last column has a width of 100%
 			.gutters .#$column-prefix + $i  
                 width: 100% 
 		
@@ -109,7 +109,6 @@ pull-setup($number: $column-number)
 	@for $i from 1 to $number 
 		.pull-#$i  
             right: 100% / $number * $i; 
-	
 	
 	@for $i from 1 to $number  
 		.gutters .pull-#$i  
