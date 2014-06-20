@@ -11,7 +11,7 @@ Quickstart
 
 It's easy to get started with Concise:
 
-- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
+- [Download the latest release](https://github.com/ConciseCSS/concise.css-stylus/archive/master.zip)
 - [Install with Bower](http://bower.io) `bower install ConciseCSS/Concise`
 
 Pre-Processors
@@ -22,3 +22,21 @@ Concise was originally written in [SASS](http://sass-lang.com/) but has up-to-da
 - [Concise-SASS](https://github.com/ConciseCSS/concise.css)
 - [Concise-LESS](https://github.com/ConciseCSS/concise.css-less)
 - [Concise-Stylus](https://github.com/ConciseCSS/concise.css-stylus)
+
+Versioning
+-------------
+
+Concise is currently maintained under the [Semantic Versioning guidelines](http://semver.org/).
+
+Creator
+-------------
+
+**Keenan Payne**
+- [Website](http://keenanpayne.com)
+- [GitHub](http://github.com/keenanpayne)
+- [Twitter](http://twitter.com/keenanpayne)
+
+License
+-------------
+
+Code and documentation copyright 2014 Keenan Payne. Code released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE). Documentation released under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/).
