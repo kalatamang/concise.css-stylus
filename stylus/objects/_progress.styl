@@ -5,8 +5,9 @@ if $use-progress == true
     .progress
         background-color: #f9f9f9
         color: #fff
-        font-size(11px) 
+        font-size(11px, false) 
         height: 12px
+        line-height: 1.182
         margin: 6px 0
         position: relative
         text-align: center
@@ -17,12 +18,14 @@ if $use-progress == true
         vendor(box-sizing, initial)
 
     .progress-small
-        font-size(9px) 
+        font-size(9px, false) 
         height: 6px
+        line-height: 0.875
 
     .progress-large
-        font-size($base-font-size) 
+        font-size($base-font-size, false) 
         height: 25px
+        line-height: 1.7
    
     .progress
         > span
