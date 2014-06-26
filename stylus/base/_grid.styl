@@ -13,9 +13,9 @@ if $use-grid == true
     [class*='#$column-prefix']
         vendor(background-clip, padding-box !important)
         
-		&.right 
+        &.right 
             float: right
-		
+        
         img 
             max-width: 100%
    
@@ -31,24 +31,24 @@ if $use-grid == true
        
         
         // Row columns        
-		grid-setup()
+        grid-setup()
         
-		
-		// Push
+        
+        // Push
         if $use-push == true
-			[class*='push-'] 
+            [class*='push-'] 
                 position: relative
-			
-			push-setup() 
-		
+            
+            push-setup() 
         
-		// Pull
+        
+        // Pull
         if $use-pull == true
-			[class*='pull-'] 
+            [class*='pull-'] 
                 position: relative
-			
-			pull-setup()
-	
+            
+            pull-setup()
+    
 
     // Non-responsive grid
     .non-responsive
@@ -58,9 +58,9 @@ if $use-grid == true
        
         
         .gutters [class*='#$column-prefix'], 
-		&.gutters [class*='#$column-prefix'] 
+        &.gutters [class*='#$column-prefix'] 
             margin-left: $gutters
         
         .gutters [class*='#$column-prefix']:first-child, 
-		&.gutters [class*='#$column-prefix']:first-child 
+        &.gutters [class*='#$column-prefix']:first-child 
             margin-left: 0
